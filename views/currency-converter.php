@@ -89,6 +89,21 @@
             }
             
             ?>
+            <?php
+            $city = 'Tashkent';
+            $api_key = 'your_api_key_here';
+            $units = 'metric';  
+            $lang = 'uz';         
+            $api_url = "https://api.openweathermap.org/data/2.5/weather?q=$city&appid=$api_key&units=$units&lang=$lang";
+
+
+            $response =($api_url);
+            $data = json_decode($response, true);
+
+            echo "Shahar: $city\n";
+           
+            ?>
+
 
                  
             <i class="bi bi-info-circle"></i></p>
